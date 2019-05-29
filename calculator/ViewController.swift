@@ -41,9 +41,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resultButtonOnClick(_ sender: UIButton) {
-        let lastNumber = self.mainLabel.text ?? ""
-        let bla = lastNumber.components(separatedBy: "\(self.operation) ")
-        let formattedNumber =  Double(bla[1]) ?? 0
+        let displayed = self.mainLabel.text ?? ""
+        let numbers = displayed.components(separatedBy: "\(self.operation) ")
+        let formattedNumber =  Double(numbers[1]) ?? 0
         
         getResult(buttonText: self.operation, secondValue: formattedNumber)
         
